@@ -1,7 +1,7 @@
 export interface Food {
     readonly name: string;
     readonly id: number;
-    readonly typeId: number;
+    typeId: number;
     readonly prepareTime: number;
     readonly spoilTime: number;
     readonly ready: Date;

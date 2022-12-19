@@ -54,3 +54,9 @@ const gameSlice = createSlice({
 
 // export reducer
 export default gameSlice.reducer
+
+export const {
+    addClient,
+    prepareFood,
+    serveFood
+} = gameSlice.actions
