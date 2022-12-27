@@ -8,7 +8,7 @@ interface FoodProps {
 
 const FoodComponent = ({data, showCooking, client}: FoodProps) => {
     const now = new Date();
-    const cookedin = Math.abs((now.getTime() - data.ready.getTime()) / 1000);
+    const cookedin = data.ready ? Math.abs((now.getTime() - data.ready.getTime()) / 1000) : 0;
     const overcookedIn = data.overcooked ? Math.abs((now.getTime() - data.overcooked.getTime()) / 1000) : 0;
     return (
         <div>

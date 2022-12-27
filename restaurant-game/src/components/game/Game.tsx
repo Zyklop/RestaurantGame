@@ -15,7 +15,7 @@ const Game = () => {
   }
 
   function handlePrepareFodd(typeId: number): void {
-    prepareFood(typeId);
+    dispatch(prepareFood(typeId));
   }
 
   // redux game loop
@@ -39,7 +39,6 @@ const Game = () => {
   return (
     <div>
       <h1>Restaurant Yanan</h1>
-      <h2>Customers</h2>
       <ClientList data={clients}/>
       <button onClick={() => handleAddClient}>Invite Customer</button>
       <h2>Kitchen</h2>

@@ -2,17 +2,20 @@ export interface Food {
     readonly name: string;
     readonly id: number;
     typeId: number;
-    readonly prepareTime: number;
-    readonly spoilTime: number;
-    readonly ready: Date;
+    readonly ready?: Date;
     readonly overcooked?: Date;
-    readonly spoiled: Date;
+    readonly spoiled?: Date;
     state: FoodState;
 
-    createNew(): Food;
+    createNew(): Food | undefined;
 }
 
-export type FoodState = "cooking" | "ready" | "unusable"
+export enum FoodState {
+    cooking = 1,
+    ready, 
+    unusable,
+    unknown
+}
 
 export class Client {
     name: string;
